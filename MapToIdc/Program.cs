@@ -64,7 +64,7 @@ namespace MapToIdc
 
                     var tokens = line.Split(' ').Where(token => token.Length > 0).ToList();
 
-                    if (tokens.Count < 4 || !tokens.First().Contains(':') || !(tokens.Last().Contains(".obj") || tokens.Last().Contains(".xex")))
+                    if (tokens.Count < 4 || !tokens.First().Contains(':') || !(tokens.Last().Contains(".obj") || tokens.Last().Contains(".exe") || tokens.Last().Contains(".xex")))
                         continue;
 
                     var address = Convert.ToInt32($"0x{tokens[2].Split(':').Last()}", 16);
