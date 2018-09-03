@@ -76,7 +76,7 @@ namespace MapToIdc
 
                     addresses.Add(address);
 
-                    writer.WriteLine($"\tMakeName(0x{address:X}, \"{tokens[1]}\");{comment}");
+                    writer.WriteLine($"\tMakeName(0x{address:X}, \"{name}\");{comment}");
                 }
 
                 writer.WriteLine("}");
